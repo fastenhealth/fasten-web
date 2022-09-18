@@ -1,65 +1,32 @@
-<div id="nav-border" class="container">
-    <nav id="nav" class="nav justify-content-center">
-        {{ range .Site.Menus.main }}
-        <a class="nav-link" href="{{ .URL }}">
-            {{ if .Pre }}
-            {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
-            {{ $icon }}
-            {{ end }}
-            {{ $text := print .Name | safeHTML }}
-            {{ $text }}
-        </a>
-        {{ end }}
-    </nav>
-</div>
-
-
-<!-- header begin -->
 <header>
-    <!-- menu-area -->
-    <div class="top-bar-white top-bar-3 pt-30 pb-30">
+    <nav class="navbar navbar-expand-lg navbar-lg navbar-dark bg-dark">
         <div class="container">
-            <div class="row d-flex align-items-center">
-                <div class="col-xl-4 col-lg-4 col-md-4">
-                    <div class="logo logo-3 pos-rel">
-                        <a href="index.html"><img style="max-height: 70px" src="img/logo/fasten.svg" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-xl-8 col-lg-8 col-md-8 d-none d-lg-block">
-
-                    <div class="header-cta-info header-cta-info-3 d-flex f-right d-none">
-                        <div class="header-cta-icon">
-                            <img src="img/cta/message-icon.png" alt="">
-                        </div>
-                        <div class="header-cta-text">
-                            <h5 class="theme-color">Email Address</h5>
-                            <span class="primary-color">hello@fastenhealth.com</span>
-                        </div>
-                    </div>
+            <a class="navbar-brand tx-30 font-weight-bold az-logo" href="#">fasten</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#leadUIMainNav"
+                    aria-controls="leadUIMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="typcn icon typcn-th-menu tx-26"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="leadUIMainNav">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    {{ range .Site.Menus.main }}
+                    {{ $text := print .Name | safeHTML }}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ .URL }}">{{ $text }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+                <div class="form-inline">
+                    <button class="btn btn-outline-light"><i class="typcn icon typcn-social-github tx-20"></i> Github</button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="header-menu-area header-menu-blue theme-bg">
+    </nav>
+    <div class="landing-sass-header-content bg-dark">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-8 col-lg-8">
-                    <div class="header__menu menu-dark">
-                        <nav id="mobile-menu">
-                            <ul>
-                                <li><a href="index.html">Home</a>
-
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="mobile-menu mobile-menu-blue"></div>
-                </div>
-            </div>
+            <h1 class="text-center font-weight-bold pt-5 pb-30px mb-0 text-white">All your medical records, <br/> under your control.</h1>
+            <br/>
+            <div class="text-center mb-5 "><button class="btn btn-light me-3">Get started</button><button class="btn btn-outline-light">Demo video</button></div>
         </div>
     </div>
+    <div class="text-center landing-sass-header-img-wrapper"><img src="img/dash/dash_3.png" alt="header-img" class="img-fluid" width="707px"></div>
 </header>
-<!-- header end -->
