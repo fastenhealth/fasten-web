@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand tx-30 font-weight-bold az-logo" href="/">fasten</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#leadUIMainNav"
+                aria-controls="leadUIMainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="typcn icon typcn-th-menu tx-26"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="leadUIMainNav">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                {{ range .Site.Menus.main }}
+                {{ $text := print .Name | safeHTML }}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ .URL }}">{{ $text }}</a>
+                </li>
+                {{ end }}
+            </ul>
+            <div class="form-inline">
+                <a href="https://github.com/fastenhealth" class="btn btn-outline-light"><i class="typcn icon typcn-social-github tx-20"></i> Github</a>
+            </div>
+        </div>
+    </div>
+</nav>
