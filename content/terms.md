@@ -5,7 +5,7 @@ effective: "Nov 6, 2022"
 type: page
 ---
 
-### Effective as of {{< param effective >}}
+#### Effective as of {{< param effective >}}
 
 ## Introduction
 
