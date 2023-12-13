@@ -93,13 +93,13 @@ layout: default
 
                         const a = document.createElement('a');
                         a.style.display = 'none';
-                        a.href = resp.data.download_link;
-                        a.download = resp.data.filename;
+                        a.href = resp?.data?.download_link;
+                        a.download = resp?.data?.filename;
                         document.body.appendChild(a);
                         a.click();
 
                     },
-                    error: function(resp) { alert('Failed!' + resp.error); },
+                    error: function(resp) { alert('Failed! ' + resp?.responseJSON?.error); },
                 });
             }
 
