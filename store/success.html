@@ -84,51 +84,28 @@
         <div class="pt-20 py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
                 <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Fasten for Desktop</h2>
-                <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Accessibility without technical complexities. Install with a single click.</p>
+                <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Thanks for being one of the early adopters!</p>
             </div>
-            <div class="grid gap-8 lg:grid-cols-2">
-                <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <div class="grid gap-8 lg:grid-cols-4">
+                <article class="col-start-2 col-span-2 p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                     <div class="flex items-center mb-5 text-gray-500">
                   <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800 mr-4">
-                      amd64
+                      <a href="https://apps.microsoft.com/detail/Fasten%20Health/9PL8CZV1NRFP?launch=true&mode=full">Windows</a>
                   </span>
                         <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-                      arm64
+                      <a href="https://apps.apple.com/us/app/fasten-health/id6471036301">macOS</a>
                   </span>
                     </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Windows</h2>
-                    <p class="mb-5 font-light text-gray-500 dark:text-gray-400">Choose the version that fits your Windows device. Whether you're on ARM or x86_64, Fasten Health is tailored to your system for optimal performance.</p>
-                    <div class="flex justify-end items-center">
-                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800" type="button">Download <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                        </svg>
-                        </button>
-
-                        <!-- Dropdown menu -->
-                        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                                <li>
-                                    <span id="windowsAmd64DownloadLink" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">x86_64 (default)</span>
-                                </li>
-                                <li>
-                                    <span id="REMOVEwindowsArm64DownloadLink" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">arm64 (coming soon)</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <div class="flex justify-between items-center mb-5 text-gray-500">
-                  <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-                      universal
-                  </span>
-
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">macOS</h2>
-                    <p class="mb-5 font-light text-gray-500 dark:text-gray-400">Mac user? We've got you covered. Fasten Health offers a single, universal download for Mac, simplifying your experience and ensuring compatibility.</p>
-                    <div class="flex justify-end items-center">
-                        <button id="macDownloadLink" type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800">Download</button>
-                    </div>
+                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Now Available in the App Store</h2>
+                    <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+                        Fasten Health for Desktop is now available in the App Store! As an early-adopter, lifetime license holder, you can get access to the Windows/Mac version of Fasten Health free-of-charge.
+                        <br/>
+                        <br/>
+                        Just search your inbox for an email titled: <strong>"Fasten Health - App Store Promo Code"</strong>. If you can't find it, just contact us at <a href="mailto:support@fastenhealth.com">support@fastenhealth.com</a> and we'll get you sorted.
+                        <br/>
+                        <br/>
+                        Thanks for your support!
+                    </p>
                 </article>
             </div>
         </div>
@@ -177,63 +154,6 @@
         </li>
     </ul>
 </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-    <script type="application/javascript">
-
-        $(document).ready(function() {
-
-
-            function generateDownloadLink(os, arch){
-
-                let payload = {
-                    os: os,
-                    arch: arch
-                }
-
-                const urlParams = new URLSearchParams(window.location.search);
-                const sessionId = urlParams.get('session_id');
-                const customerId = urlParams.get('customer_id');
-
-                if(sessionId){
-                    payload.session_id = sessionId;
-                }
-                if(customerId){
-                    payload.customer_id = customerId;
-                }
-
-                $.ajax('https://api.platform.fastenhealth.com/v1/store/download_link', {
-                    data : JSON.stringify(payload),
-                    contentType : 'application/json',
-                    type : 'POST',
-                    success: function(resp) {
-
-
-                        const a = document.createElement('a');
-                        a.style.display = 'none';
-                        a.href = resp?.data?.download_link;
-                        a.download = resp?.data?.filename;
-                        document.body.appendChild(a);
-                        a.click();
-
-                    },
-                    error: function(resp) { alert('Failed! ' + resp?.responseJSON?.error); },
-                });
-            }
-
-
-            $("#macDownloadLink").click(function(){
-                generateDownloadLink('darwin', 'universal');
-            });
-            $("#windowsAmd64DownloadLink").click(function(){
-                generateDownloadLink('windows', 'amd64');
-            });
-            $("#windowsArm64DownloadLink").click(function(){
-                generateDownloadLink('windows', 'arm64');
-            });
-        });
-    </script>
 
 </div>
 
