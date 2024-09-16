@@ -7,6 +7,7 @@ module.exports = {
     './_posts/*.md',
     './store/*.html',
     './*.md',
+    './patients/*.html',
     './*.html',
     "./node_modules/flowbite/**/*.js"
   ],
